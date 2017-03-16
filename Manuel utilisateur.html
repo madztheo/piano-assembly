@@ -1,0 +1,297 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Manuel Utilisateur</title>
+    <link rel="stylesheet" href="https://bootswatch.com/readable/bootstrap.min.css">
+    <style>
+        .container {
+            padding-left: 10%;
+            padding-right: 10%;
+            height: 100%;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        #home {
+            height: 100%;
+            min-height: 100%;
+        }
+
+        #home-box {
+            height: auto;
+            padding-bottom: 20%;
+            padding-top: 20%;
+        }
+
+        .bs-callout {
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #eee;
+            border-left-width: 5px;
+            border-radius: 3px
+        }
+
+        .bs-callout p:last-child {
+            margin-bottom: 0
+        }
+
+        .bs-callout code {
+            border-radius: 3px
+        }
+
+        .bs-callout+.bs-callout {
+            margin-top: -5px
+        }
+
+        .bs-callout-danger {
+            border-left-color: #ce4844
+        }
+
+        .bs-callout-danger span {
+            color: #ce4844
+        }
+
+        .bs-callout-info {
+            border-left-color: #1b809e
+        }
+
+        .bs-callout-info span {
+            color: #1b809e
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="home">
+            <div id="home-box">
+                <div class="header clearfix">
+                    <h3 class="text-muted">Manuel utilisateur</h3>
+                </div>
+                <div class="jumbotron">
+                    <h1>Bienvenu pianiste</h1>
+                    <p class="lead">Vous venez de faire l'acquisition d'un petit programme codé en assembleur. Celui-ci va vous permettre de faire du piano à votre aise. Et parce qu'on est gentil, on vous détaille la démarche pour ☺</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Lancer le piano sur VMWare</h4>
+                        <p>Vous n'avez jamais utilisé de machine virtuelle? Pas de panique, la démarche est détaillée pas à pas.</p>
+                        <p><a href="#vmware" class="btn btn-default btn-xs" role="button">Lire la suite</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Prise en main du piano</h4>
+                        <p>Impatient de jouer? On vous comprend. Mais comment marche le piano?</p>
+                        <p><a href="#piano" class="btn btn-default btn-xs" role="button">La réponse ici</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="vmware">
+            <h2>Lancer le piano sur VMWare</h2>
+            <ol>
+                <li>Ouvrez <b>VMware Workstation</b>
+                </li>
+                <li>Créez une nouvelle machine virtuelle: <b>File</b> &gt; <b>New Virtual Machine</b>
+                    <p><img src="http://imgur.com/LDekZqV.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Choisissez une configuration de type <b>Typical</b>
+                    <p><img src="http://imgur.com/0Re49cZ.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Cochez l'option pour installer l'OS plus tard
+                    <p><img src="http://imgur.com/4og1xiE.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Pour le choix de l'OS, cochez <b>Other</b> et sélectionnez <b>MS-DOS</b>
+                    <p><img src="http://imgur.com/I9lCtjz.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Dans le premier champ, nommez la machine virtuelle comme bon vous semble (<i>par exemple: PianoASM</i>) et définissez le répertoire d'installation (<i>par défaut: C:\Users\%USERNAME%\Documents\Virtual Machines</i>)
+                    <p><img src="http://imgur.com/2PduBCX.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Allouez un maximum de 2GB pour cette VM, et enregistrez la dans un seul fichier
+                    <p><img src="http://imgur.com/2FhL5zF.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Cliquez sur <b>Customize Harwdare</b>
+                    <p><img src="http://imgur.com/Ylyh0Qz.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Cliquez sur <b>Add...</b>
+                    <p><img src="http://imgur.com/688g5Ce.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Sélectionnez <b>Floppy Drive</b>
+                    <p><img src="http://imgur.com/9fHQ3Xt.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Utilisez une <b>image floppy</b>
+                    <p><img src="http://imgur.com/rpDZmC1.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Parcourez vos fichiers et sélectionner le fichier <code>piano.flp</code>. Veillez à laisser l'option <b>Connect at power on</b> cochée
+                    <p><img src="http://imgur.com/u0Scfl4.png" class="img-thumbnail">
+                    </p>
+                </li>
+                <li>Validez le tout, et votre VM est prête à l'emploi!</li>
+            </ol>
+        </div>
+        <div id="piano">
+            <h2>Prise en main du piano</h2>
+            <div class="bs-callout bs-callout-info" id="callout-glyphicons-location">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>Le programme codé en assembleur est en anglais.
+            </div>
+            <h4>Fonctionnement du piano</h4>
+            <p>Vous disposer de 12 touches, incluant 7 touches blanches et 5 touches noires. Ces dernières sont associées à une touches de votre clavier. Peu importe la langue de ce dernier, les touches sont mappées selon leurs position.</p>
+            Avec un clavier français, les touches seraient:
+            <p><img src="http://imgur.com/G7an3if.png" class="img-thumbnail">
+            </p>
+            <p>Une simple pression sur ces touches activera une note, basée sur une fréquence. Le piano permet de jouer sur l'octave étant introduite par le Middle C (Do3 en notation latine).</p>
+            <p>Voici un récapitulatif des notes utilisées, ainsi que les fréquences associées:</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Touche</th>
+                        <th>Note</th>
+                        <th>Notation latine</th>
+                        <th>Fréquence (Hz)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Q</th>
+                        <td>Do</td>
+                        <td>Do3</td>
+                        <td>261,626</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Z</th>
+                        <td>Do#</td>
+                        <td>Do3#</td>
+                        <td>277,183</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">S</th>
+                        <td>Ré</td>
+                        <td>Ré3</td>
+                        <td>293,665</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">E</th>
+                        <td>Ré#</td>
+                        <td>Ré3#</td>
+                        <td>311,127</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">D</th>
+                        <td>Mi</td>
+                        <td>Mi3</td>
+                        <td>329,628</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">F</th>
+                        <td>Fa</td>
+                        <td>Fa3</td>
+                        <td>349,228</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">T</th>
+                        <td>Fa#</td>
+                        <td>Fa3#</td>
+                        <td>369,994</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">G</th>
+                        <td>Sol</td>
+                        <td>Sol3</td>
+                        <td>391,995</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Y</th>
+                        <td>Sol#</td>
+                        <td>Sol3#</td>
+                        <td>415,305</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">H</th>
+                        <td>La</td>
+                        <td>La3</td>
+                        <td>440</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">U</th>
+                        <td>La#</td>
+                        <td>La3#</td>
+                        <td>466,164</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">J</th>
+                        <td>Si</td>
+                        <td>Si3</td>
+                        <td>493,883</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Le menu</h4>
+            <p><img src="http://imgur.com/DgIY73A.png" class="img-thumbnail">
+            </p>
+            <p>Au démarrage de votre VM, vous tombez directement dans le menu. Vous pouvez choisir de:</p>
+            <ul>
+                <li>Jouer librement</li>
+                <li>Regarder l'ordinateur jouer un morceau</li>
+                <li>S'entrainer sur un morceau</li>
+                <li>Consulter l'aide</li>
+            </ul>
+            Il vous suffit de taper <b>1</b>, <b>2</b>, <b>3</b> ou <b>4</b> pour effectuer votre choix.
+            <div class="bs-callout bs-callout-danger" id="callout-glyphicons-location">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>Les chiffres du pavé numérique ne sont pas supportés.
+            </div>
+            <p>Un message d'erreur s'affichera si vous ne respectez pas les instructions ci-dessus.</p>
+            <p><img src="http://imgur.com/7Ws1Jum.png" class="img-thumbnail">
+            </p>
+            <h4>Le mode libre</h4>
+            <p>Vous pouvez à présent jouez comme bon vous semble. Une simple pression sur les bonnes touches de votre clavier déclanchera le son. De plus, la touche du piano qui y sera associée se colorisera.</p>
+            <p><img src="http://imgur.com/w9vWuhU.png" class="img-thumbnail">
+            </p>
+            <p>Evitez de rester appyuer sur une même touche sous peine d'avoir un son va se répeter à quelques secondes d'intervalles.</p>
+            <p>Vous pouvez à tout moment retourner au menu en appuyant sur la touche <b>Echap</b>.</p>
+            <h4>Le mode "Regarde moi jouer"</h4>
+            <p>Dans ce mode de jeu, c'est l'ordinateur qui prend la main</p>
+            <p>Vous devez d'abord lui indiquer quel morceau jouer en tapant <b>1</b>, <b>2</b> ou <b>3</b>.</p>
+            <p><img src="http://imgur.com/OyGQSKx.png" class="img-thumbnail">
+            </p>
+            <div class="bs-callout bs-callout-danger" id="callout-glyphicons-location">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>Les chiffres du pavé numérique ne sont pas supportés.
+            </div>
+            <p>L'ordinateur va ensuite jouer le morceau pour vous. Prenez en de la graine.</p>
+            <h4>Le mode entrainement</h4>
+            <p>Dans cet entrainement, vous allez pouvoir jouer un morceau à votre rythme. Les notes seront misent en surbrillance, et attendront d'être préssées pour passer à la suivante.</p>
+            <p>Vous devrez à nouveau choisir sur quel morceau jouer en tapant <b>1</b>, <b>2</b> ou <b>3</b>.</p>
+            <p><img src="http://imgur.com/OyGQSKx.png" class="img-thumbnail">
+            </p>
+            <div class="bs-callout bs-callout-danger" id="callout-glyphicons-location">
+                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                <span class="sr-only">Error:</span>Les chiffres du pavé numérique ne sont pas supportés.
+            </div>
+            <p>Les touches sur lesquelles vous devrez appuyer seront grisées. Tant que vous n'appuierez pas sur la bonne touches, vous ne pourrez pas jouer la note suivante.</p>
+            <p><img src="http://imgur.com/ZF7Vj7g.png" class="img-thumbnail">
+            </p>
+            <p>Vous pouvez à tout moment retourner au menu en appuyant sur la touche <b>Echap</b>.</p>
+            <h4>L'aide</h4>
+            <p>Au cas où vous n'auriez plus cette documentation sous la main, une petit aide est présente dans le programme. Elle récapitule grossièrement son fonctionnement.</p>
+            <p><img src="http://imgur.com/0jGUW61.png" class="img-thumbnail">
+            </p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
